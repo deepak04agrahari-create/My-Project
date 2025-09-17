@@ -1,0 +1,268 @@
+
+*{
+    margin: 0;
+    font-family: Arial;
+    border: border-box;
+}
+.navbar{
+    height: 60px;
+    background-color: #0f1111;
+    color: white;
+    display: flex;  /** display all in one line**/
+    align-items: center;   /** all items of this div come in centre vertically **/
+    justify-content: space-evenly;  /* put equal space in b/w and edgeg of items */
+    
+}
+/** box1 **/
+.nav-logo{
+    height: 50px;
+    width: 100px;
+}
+.logo{
+    background-image: url("amazon_logo.png");
+    height: 50px;
+    width: 100%;
+    background-size: cover;
+}
+.border{
+    border: 1.5px solid transparent;   /** a transparent border which hover **/
+}
+.border:hover{
+    border: 1.5px solid white;     /** hover by this **/
+}
+/** box2 **/
+.add-first{
+    font-size: 12px;
+    color: #cccccc;
+    margin-left: 15px;  /** left se 15px shift **/
+}
+.add-second{
+    font-size: 16px;
+    margin-left: 3px;   /** left se 3px shift **/
+}
+.add-icon{
+    display: flex;    /** so icon and india come in same line due to flex **/
+    align-items: center;     /** all items of this div come in centre vertically **/
+}
+/** box3 **/
+.nav-search{
+    display: flex;     /** Every element of this div will come in a line **/
+    background-color: pink;
+    width: 550px;   /** for widht **/
+    height: 40px;    /** for height **/
+    border-radius: 4px;  /** for corner curve **/
+}
+.nav-search:hover{
+    border: 2px solid orange;   /**For orange border on hover **/
+}
+.select-search{
+    background-color: #f3f3f3;
+    color: black;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    border-top-left-radius: 4px;     /** curve is only for  top left **/
+    border-bottom-left-radius: 4px;  /** curve is only for bottom left  **/
+    border: none;  /** remove default border **/
+}
+.search-input{
+    width: 455px;
+    font-size: 1rem;
+    border: none;
+}
+.search-icon{
+    background-color: #febd68;
+    color: #0f1111;
+    width: 45px;
+     border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    display: flex;
+    align-items: center;    /** for vertically centre **/
+    justify-content: center;  /** for horizontally centre **/
+    font-size: 1rem;
+}
+/** box4 **/
+.country-lang {
+    display: flex;
+    width: 69.38px;
+    margin: 0px 1px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 6px 5px 7px;
+   
+}
+
+.flag {
+    background-image: url("flag.webp");
+    width: 21.6px;
+    height: 16.2px;
+    margin: 0px 2px 1px 0px;
+    background-size: cover;
+ 
+}
+
+.lang {
+    width: 18.38px;
+    height: 15px;
+    margin-left: 5px;
+   
+}
+
+.select-menu {
+   width: 8px;
+   height: 4px;
+   margin: 20px 0px 0px 1px;  
+   font-size: 0.8rem; 
+   text-align: center;     
+}
+/** box5**/
+
+.nav-first{
+    font-size: 0.7rem;
+}
+.nav-second{
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+/**box6**/
+.nav-cart i {   /**style will apply only on that icon**/
+   font-size: 33px;
+}
+.nav-cart{
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+.pannel{
+    height: 40px;
+    background-color: #222f3d;
+    display: flex;  /** Everything is inline **/
+    color: white;
+    align-items: center;
+       /** verticallly aligh **/
+}
+.pannel-ops p{
+    display: inline;  /** all options of paragraph is inline **/
+    margin-left: 16px;
+    
+    justify-content: space-evenly;
+     align-items: center;
+     font-size: 14px;
+}
+.pannel-ops{
+    width: 70%;  /** pannel options wala 70% width le **/
+    font-size: 14px;
+    
+}
+.pannel-all{
+    margin-left: 12px;
+    font-size: 17px;
+    
+}
+/** hero-section**/
+.hero-section{
+    background-image: url("hero_image.jpg");
+    height: 300px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;  /** hero-message end me le jane ke liye**/
+}
+.hero-message{
+    background-color: white;
+    color: black;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    width: 80%;
+    margin-bottom: 27px;  /** bottom se 25px upr **/
+}
+.hero-message a {
+    color: #007185;  /** hero-message me jo ancle tag hai**/
+}
+.shop-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #ed6b06;
+}
+.box{
+    height: 400px;
+    width: 23%;
+    background-color: white;
+    padding: 20px 0px 15px;
+    margin-top: 15px;
+}
+.box-image{
+    height: 300px;
+    background-size: cover;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+   
+}
+.box-content{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.box-content p {
+    color: #007185;
+}
+/** footer**/
+footer{
+    margin-top: 15px;
+}
+.foot-pannel1{
+   background-color: #374758; 
+   color: white;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 0.8rem;
+   height: 50px;
+}
+.foot-pannel2{
+    display: flex;  /** all ul are horizontaly align**/
+    background-color: #222f3d;
+    color: white;
+    height: 300px;
+    justify-content: space-evenly;
+}
+ul{
+    margin-top: 40px;
+}
+ul a {                     /** a of unordered list**/
+    display: block;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    columns: #dddddd;
+}
+.foot-pannel3{
+background-color: #222f3d;
+color: white;
+border-top: 0.5px solid white;
+height: 70px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.logo{
+     background-image: url("amazon_logo.png");
+    height: 50px;
+    width: 100px;
+    background-size: cover;
+}
+.foot-pannel4{
+    background-color: #0f1111;
+    color: white;
+    height: 100px;
+    font-size: 0.7rem;
+   text-align: center;
+}
+.pages{
+    padding-top: 25px;
+}
+.copyright{
+   padding-top: 5px;
+}
