@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: rgb(245, 237, 237);
+}
+.container{
+    background: url("wave-haikei.png") no-repeat center center fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+.box{
+    width: 400px;
+    position: relative; /* means relative hai top se 50% & bottom se 50%  */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 3px solid rgb(237, 252, 240);
+    border-radius: 20px;
+    padding: 20px 40px;
+}
+.signup_header{
+    text-align: center;
+    font-size: 2rem;
+    padding: 5px 8px;
+    
+}
+.signup-body p{
+    margin-top: 20px;
+    
+}
+.signup-body p label{
+    font-size: 19px;
+    font-weight: bold;
+
+}
+.signup-body p input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    font-size: 18px;
+    outline: none;
+    color: black;
+}
+.signup-body p input[type="submit"]{
+    background-color: rgb(19, 37, 112);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.signup-body p input[type="submit"]:hover{
+    background-color: #133c57;
+}
+.signup_footer p{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.signup_footer p a{
+    text-decoration: none;
+
+}
+.signup_footer p a:hover{
+    color: rgb(19, 37, 112);
+    text-decoration: underline;
+}
