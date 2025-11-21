@@ -1,5 +1,4 @@
-const BASE_URL =
-  "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies";
+const BASE_URL = "https://open.er-api.com/v6/latest";
 
 const dropdowns = document.querySelectorAll(".dropdown_id");
 const btn = document.querySelector("form button");
@@ -14,20 +13,13 @@ for (let select of dropdowns) {
     newOption.innerText = currCode;
     newOption.value = currCode;
 
-    // Default values
-    if (select === fromCurr && currCode === "USD") {
-      newOption.selected = true;
-    } else if (select === toCurr && currCode === "INR") {
-      newOption.selected = true;
-    }
+    if (select === fromCurr && currCode === "USD") newOption.selected = true;
+    if (select === toCurr && currCode === "INR") newOption.selected = true;
 
     select.append(newOption);
   }
 
-  // Update flag on change
-  select.addEventListener("change", (evt) => {
-    updateFlag(evt.target);
-  });
+  select.addEventListener("change", (evt) => updateFlag(evt.target));
 }
 
 // Update exchange rate
@@ -40,12 +32,15 @@ const updateExchangeRate = async () => {
     amount.value = "1";
   }
 
-  const URL = `${BASE_URL}&base_currency=${fromCurr.value}`;
+  // Correct API URL
+  const URL = `${BASE_URL}/${fromCurr.value}`;
+
   let response = await fetch(URL);
   let data = await response.json();
 
-  // Get conversion rate for target currency
-  let rate = data.data[toCurr.value].value;
+  // Correct way of extracting rate
+  let rate = data.rates[toCurr.value];
+
   let finalAmount = (amtVal * rate).toFixed(2);
 
   msg.innerText = `${amtVal} ${fromCurr.value} = ${finalAmount} ${toCurr.value}`;
@@ -67,6 +62,4 @@ btn.addEventListener("click", (evt) => {
 });
 
 // On page load
-window.addEventListener("load", () => {
-  updateExchangeRate();
-});
+window.addEventListener("load", updateExchangeRate);
